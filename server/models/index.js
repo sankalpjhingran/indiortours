@@ -20,6 +20,9 @@ sequelize.authenticate()
     })
     .catch(function (err) {
         console.log("Connection Unsuccessful " + err);
+        sequelize.authenticate().then(function(){
+          console.log('Attempting again...');
+        });
     })
     .done();
 
