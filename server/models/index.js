@@ -7,10 +7,8 @@ var crypto = require('crypto');
 var DataTypes = require("sequelize");
 
   //Setting up the config
-var sequelize = new Sequelize('indiortours', 'root', 'india@123', {
-    host: 'localhost',
-    port: 3306,
-    dialect: 'mysql',
+  var sequelize = new Sequelize('heroku_6703c9e4b026cda', 'b0ec83749ebc15', '8d6d9958', {
+    host: 'us-cdbr-iron-east-05.cleardb.net',
     logging: console.log,
 });
 
