@@ -12,6 +12,11 @@ var DataTypes = require("sequelize");
     port: 5432,
     dialect: 'postgres',
     logging: console.log,
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    },
 });
 
 //Checking connection status
