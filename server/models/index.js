@@ -23,7 +23,7 @@ const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
 
   //Setting up the config
-  var sequelize = new Sequelize(DATABASE_URL, {
+  var sequelize = new Sequelize(process.env.HEROKU_POSTGRESQL_BRONZE_URL, {
     port: 5432,
     dialect: 'postgres',
     dialectOptions: { ssl: true },
