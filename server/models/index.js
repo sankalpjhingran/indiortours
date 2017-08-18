@@ -10,7 +10,7 @@ var pe = process.env;
 const pguser = pe.PGUSER || 'postgres';
 const pgpass = pe.PGPASS || 'postgres';
 const pghost = pe.PGHOST || 'localhost';
-const pgport = pe.PGPORT || defaultPostgresPort;
+const pgport = pe.PGPORT;
 const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
 const pgdatabase = pe.PGDATABASE || 'focusdb';
