@@ -28,7 +28,7 @@ const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
 
   //Setting up the config
   var sequelize = new Sequelize(pe.DATABASE_URL, {
-    port: pe.PORT;,
+    port: pe.PORT,
     dialect: 'postgres',
     dialectOptions: { ssl: true },
     logging: console.log,
