@@ -18,6 +18,7 @@ console.log('====>3 ' + pghost);
 console.log('====>4 ' + pgport);
 console.log('====>5 ' + pgdatabase);
 console.log('====>6 ' + pe);
+console.log('====>6 ' + process.env.HEROKU_POSTGRESQL_BRONZE_URL);
 
 const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
