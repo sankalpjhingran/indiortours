@@ -12,19 +12,19 @@ const pgpass = pe.PGPASS;
 const pghost = pe.PGHOST;
 const pgport = pe.PGPORT;
 const pgdatabase = pe.PGDATABASE;
-console.log('====> ' + pguser);
-console.log('====> ' + pgpass);
-console.log('====> ' + pghost);
-console.log('====> ' + pgport);
-console.log('====> ' + pgdatabase);
+console.log('====>1 ' + pguser);
+console.log('====>2 ' + pgpass);
+console.log('====>3 ' + pghost);
+console.log('====>4 ' + pgport);
+console.log('====>5 ' + pgdatabase);
+console.log('====>6 ' + pe);
 
 const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
 
   //Setting up the config
-  var sequelize = new Sequelize(defaultDbUrl, {
-    host: pe.PGHOST,
-    port: pe.PORT,
+  var sequelize = new Sequelize(DATABASE_URL, {
+    port: 5432,
     dialect: 'postgres',
     dialectOptions: { ssl: true },
     logging: console.log,
