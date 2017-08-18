@@ -7,11 +7,17 @@ var crypto = require('crypto');
 var DataTypes = require("sequelize");
 var pe = process.env;
 
-const pguser = pe.PGUSER || 'postgres';
-const pgpass = pe.PGPASS || 'postgres';
-const pghost = pe.PGHOST || 'localhost';
+const pguser = pe.PGUSER;
+const pgpass = pe.PGPASS;
+const pghost = pe.PGHOST;
 const pgport = pe.PGPORT;
-const pgdatabase = pe.PGDATABASE || 'focusdb';
+const pgdatabase = pe.PGDATABASE;
+console.log('====> ' + pguser);
+console.log('====> ' + pgpass);
+console.log('====> ' + pghost);
+console.log('====> ' + pgport);
+console.log('====> ' + pgdatabase);
+
 const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
 
