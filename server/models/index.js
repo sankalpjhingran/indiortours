@@ -11,9 +11,9 @@ const pguser = pe.PGUSER || 'postgres';
 const pgpass = pe.PGPASS || 'postgres';
 const pghost = pe.PGHOST || 'localhost';
 const pgport = pe.PGPORT;
+const pgdatabase = pe.PGDATABASE || 'focusdb';
 const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
-const pgdatabase = pe.PGDATABASE || 'focusdb';
 
   //Setting up the config
   var sequelize = new Sequelize(defaultDbUrl, {
