@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "dev": "node ./bin/www"
+    "dev": "node app.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
