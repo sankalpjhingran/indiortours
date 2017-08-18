@@ -7,26 +7,28 @@ var crypto = require('crypto');
 var DataTypes = require("sequelize");
 
 var pe = process.env;
+
+
 console.log('====>6 ' + pe);
 console.log('====>6 ' + JSON.stringify(pe));
 const pguser = pe.PGUSER;
 const pgpass = pe.PGPASS;
-const pghost = pe.PGHOST;
-const pgport = pe.PGPORT;
-const pgdatabase = pe.PGDATABASE;
+const pghost = pe.HOST;
+const pgport = pe.PORT;
+const pgdatabase = pe.DATABASE_URL;
 console.log('====>1 ' + pguser);
 console.log('====>2 ' + pgpass);
 console.log('====>3 ' + pghost);
 console.log('====>4 ' + pgport);
 console.log('====>5 ' + pgdatabase);
-console.log('====>6 ' + process.env.HEROKU_POSTGRESQL_BRONZE_URL);
+console.log('====>6 ' + process.env.DATABASE_URL);
 
 const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
  ':' + pgport + '/' + pgdatabase;
 
   //Setting up the config
-  var sequelize = new Sequelize(process.env.HEROKU_POSTGRESQL_BRONZE_URL, {
-    port: 5432,
+  var sequelize = new Sequelize(pe.DATABASE_URL, {
+    port: pe.PORT;,
     dialect: 'postgres',
     dialectOptions: { ssl: true },
     logging: console.log,
