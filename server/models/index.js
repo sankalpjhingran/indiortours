@@ -6,9 +6,18 @@ var Sequelize = require('sequelize');
 var crypto = require('crypto');
 var DataTypes = require("sequelize");
 var pe = process.env;
+
+const pguser = pe.PGUSER || 'postgres';
+const pgpass = pe.PGPASS || 'postgres';
+const pghost = pe.PGHOST || 'localhost';
+const pgport = pe.PGPORT || defaultPostgresPort;
+const defaultDbUrl = 'postgres://' + pguser + ':' + pgpass + '@' + pghost +
+ ':' + pgport + '/' + pgdatabase;
+const pgdatabase = pe.PGDATABASE || 'focusdb';
+
   //Setting up the config
-  var sequelize = new Sequelize('de5ml9a574vklj', 'eqyftdnqqogabd', 'd1f36b24ce55df93fa72221961b1a9f9328600fceaec3b081c223834a6a65b9b', {
-    host: 'ec2-23-23-222-147.compute-1.amazonaws.com',
+  var sequelize = new Sequelize(defaultDbUrl, {
+    host: pe.PGHOST,
     port: pe.PORT,
     dialect: 'postgres',
     dialectOptions: { ssl: true },
