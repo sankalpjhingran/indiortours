@@ -5,7 +5,6 @@ var fs        = require("fs");
 var Sequelize = require('sequelize');
 var crypto = require('crypto');
 var DataTypes = require("sequelize");
-require('dotenv').config();
 
 var pe = process.env;
 console.log('====>6 ' + pe);
