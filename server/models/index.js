@@ -5,8 +5,9 @@ var fs        = require("fs");
 var Sequelize = require('sequelize');
 var crypto = require('crypto');
 var DataTypes = require("sequelize");
-var pe = process.env;
+require('dotenv').config();
 
+var pe = process.env;
 const pguser = pe.PGUSER;
 const pgpass = pe.PGPASS;
 const pghost = pe.PGHOST;
