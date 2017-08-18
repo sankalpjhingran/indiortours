@@ -11,6 +11,7 @@ var DataTypes = require("sequelize");
     host: 'ec2-23-23-222-147.compute-1.amazonaws.com',
     port: 5432,
     dialect: 'postgres',
+    dialectOptions: { ssl: true },
     logging: console.log,
     pool: {
       max: 5,
