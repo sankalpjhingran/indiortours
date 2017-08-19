@@ -10,8 +10,10 @@ var pe = process.env || process.NODE_ENV;
 
 console.log('====>6 ' + pe);
 console.log('====>6 ' + JSON.stringify(pe));
+var sequelize;
 //pe.DATABASE_URL
   //Setting up the config
+  /*
   var sequelize = new Sequelize('postgres://eqyftdnqqogabd:d1f36b24ce55df93fa72221961b1a9f9328600fceaec3b081c223834a6a65b9b@ec2-23-23-222-147.compute-1.amazonaws.com:5432/de5ml9a574vklj', {
     port: pe.PORT,
     dialect: 'postgres',
@@ -44,6 +46,6 @@ fs
     module.exports[model.name] = model;
   });
 
-
+*/
 // export connection
 module.exports.sequelize = sequelize;
