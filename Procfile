@@ -1,1 +1,1 @@
-web: node ./server/app.js process.env.PORT
+web: node ./server/app.js $PORT
