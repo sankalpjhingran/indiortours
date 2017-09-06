@@ -20,11 +20,11 @@
     "mysql": "^2.14.1",
     "passport": "^0.3.2",
     "path": "^0.12.7",
-    "pg": "6.4.2",
-    "pg-hstore": "^2.3.2",
+    "pg": "6.3.0",
+    "pg-hstore": "2.3.2",
     "pgtools": "0.0.2",
     "pug": "^2.0.0-rc.1",
-    "sequelize": "4.8.0",
+    "sequelize": "4.3.2",
     "serve-favicon": "~2.3.2"
   },
   "devDependencies": {
