@@ -13,6 +13,9 @@ var index = require('./routes/index');
 var login = require('./routes/login');
 var regusers = require('./routes/regusers');
 
+var debug = require('debug')('server:server');
+var http = require('http');
+
 var app = express();
 
 app.use(cors()) // <--- CORS
@@ -22,10 +25,6 @@ console.log('Initializing app.js file====>2');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 console.log('Initializing app.js file====>3');
-
-var app = require('../app');
-var debug = require('debug')('server:server');
-var http = require('http');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
