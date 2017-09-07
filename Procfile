@@ -1,1 +1,1 @@
-web: node ./server/app.js $PORT
+web: NODE_ENV=production node ./server/app.js $PORT
