@@ -17,9 +17,11 @@ var app = express();
 
 app.use(cors()) // <--- CORS
 
+console.log('Initializing app.js file====>2');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+console.log('Initializing app.js file====>3');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -31,12 +33,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+console.log('Initializing app.js file====>4');
 //app.use('/*', index); //<-- COMMENT THIS
 app.get('/*', function(req, res) {
   console.log('Calling index.html===>');
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
+console.log('Initializing app.js file====>5');
 app.use('/api/login', login);
 app.use('/api/regusers', regusers);
 
