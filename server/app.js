@@ -33,7 +33,7 @@ app.use('/api/login', login);
 app.use('/api/regusers', regusers);
 
 // In production, we'll actually serve our angular app from express
-if (app.get('env') === 'production') {
+//if (app.get('env') === 'production') {
   app.use(express.static(path.join(__dirname, '/dist')));
 
   // production error handler
@@ -45,7 +45,7 @@ if (app.get('env') === 'production') {
       error: {}
     });
   });
-}
+//}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
