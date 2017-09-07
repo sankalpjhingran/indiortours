@@ -29,6 +29,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/*', index); //<-- COMMENT THIS
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+
 app.use('/api/login', login);
 app.use('/api/regusers', regusers);
 
